@@ -7,7 +7,8 @@
 
 /* Settings for body font/background */
 body {
-  font-family: Arial, sans-serif;
+	/*puts Roboto as the first option*/
+  font-family: 'Roboto', Arial, sans-serif;
   background-color: #f2f2f2;
 }
 
@@ -75,6 +76,13 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+/* Flexbox positioning */
+.section-with-flexbox {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Media query for responsiveness */
