@@ -298,30 +298,11 @@ body.light-mode .preloader .preloader-heading .load-text {
 
 /*
 * ===============================
-*  START: Blog Section
-* ===============================
-*/
-.light-mode .blog-section {
-	background: var(--tj-white);
-}
-.light-mode .blog-item .blog-content {
-	background: var(--tj-white);
-}
-.light-mode .blog-item .blog-content .blog-title {
-	color: var(--tj-theme-secondary);
-}
-.light-mode .blog-item:hover .blog-content .blog-title {
-	color: var(--tj-white);
-}
-/* END: Blog Section */
-
-/*
-* ===============================
 *  START: Contact Section
 * ===============================
 */
 .light-mode .contact-section {
-	background: var(--tj-off-white);
+	background: var(--tj-white);
 	display: flex;          /* Enable flexbox */
 	justify-content: center; /* Centers the form horizontally */
   	align-items: center;     /* Centers the form vertically */
