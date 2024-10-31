@@ -820,7 +820,15 @@
                <div id="form-status" class="alert" style="display: none;"></div>
 
                <div class="tj-contact-form">
-                  <form target="_blank" action="https://formsubmit.co/jasonxu.coding@gmail.com" method="POST">
+                  <!-- Update form action for Web3Forms -->
+                  <form action="https://api.web3forms.com/submit" method="POST">
+                     
+                     <!-- Web3Forms Access Key -->
+                     <input type="hidden" name="access_key" value="e9d3256e-dbca-4701-893e-02d5f3d3cc9c">
+                     
+                     <!-- Honeypot Spam Protection -->
+                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                      <div class="row gx-3">
                         <div class="col-sm-6">
                            <div class="form_group">
@@ -869,7 +877,7 @@
       </div>
    </div>
 
-   <!-- Add this right before the closing section tag -->
+   <!-- Styling for the form section -->
    <style>
       #form-status {
          margin-bottom: 20px;
@@ -890,23 +898,24 @@
          transition: opacity 0.3s;
       }
       .form_group {
-         margin-bottom: 15px; /* Adjust spacing if necessary */
+         margin-bottom: 15px;
       }
       .form-control {
          width: 100%;
-         padding: 10px; /* Ensure padding is consistent */
+         padding: 10px;
          border: 1px solid #ced4da;
-         border-radius: 5px; /* Match the old design if applicable */
-         box-shadow: none; /* Remove shadow if it's present in old design */
+         border-radius: 5px;
+         box-shadow: none;
       }
       .btn.tj-btn-primary {
-         background-color: #007bff; /* Primary color */
-         color: #fff; /* Button text color */
-         width: 100%; /* Full width */
+         background-color: #007bff;
+         color: #fff;
+         width: 100%;
       }
    </style>
 </section>
 <!-- CONTACT SECTION END -->
+
 
 
       <!-- BEGIN: Contact Form Success Modal Message -->
