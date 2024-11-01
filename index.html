@@ -193,7 +193,7 @@
                   </div>
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="5000">0</span>+</div>
+                        <div class="number"><span class="odometer" data-count="11000">0</span>+</div>
                         <div class="text">Lines of <br />Code</div>
                      </div>
                   </div>
@@ -375,8 +375,8 @@
                   <div class="section-header text-center">
                      <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Recent Works</h2>
                      <p class="wow fadeInUp" data-wow-delay=".4s">
-                        We put your ideas and thus your wishes in the form of a unique web project that inspires you and
-                        you customers.
+                        Explore my latest projects that showcase my skills in machine learning, artificial intelligence, and facial recognition technologies. 
+                        Each project reflects my commitment to innovation and problem-solving, providing insights into how these technologies can empower underrepresented communities and drive inclusivity. 
                      </p>
                   </div>
                </div>
@@ -388,8 +388,7 @@
                      <div class="button-group filter-button-group">
                         <button data-filter="*" class="active">All</button>
                         <button data-filter=".uxui">Research Papers</button>
-                        <button data-filter=".branding">Branding</button>
-                        <button data-filter=".mobile-app">Apps</button>
+                        <button data-filter=".branding">Facial Recognition Project</button>
                         <div class="active-bg"></div>
                      </div>
                   </div>
@@ -397,17 +396,21 @@
                   <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                      <div class="portfolio-sizer"></div>
                      <div class="gutter-sizer"></div>
+
+                     <!-- Facial Recognition Project -->
                      <div class="portfolio-item branding">
                         <div class="image-box">
-                           <img src="assets/img/portfolio/2.jpg" alt="" />
+                           <img src="assets/img/portfolio/facial-recognition.png" alt="" />
                         </div>
                         <div class="content-box">
-                           <h3 class="portfolio-title">Deloitte</h3>
-                           <p>Project was about precision and information.</p>
+                           <h3 class="portfolio-title">Facial Recognition Project</h3>
+                           <p>This project focused on implementing a high-accuracy facial recognition system using Python and OpenCV. It involved understanding the fundamentals of face encoding and detection. The project culminated in a live attendance system, where a webcam detects faces in real-time and logs attendance automatically into an Excel sheet. This system showcases the practical application of facial recognition for automated attendance, emphasizing both precision in detection and effective data management.</p>
                            <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                           <button data-mfp-src="#facial-recognition-popup" class="portfolio-link modal-popup"></button>
                         </div>
                      </div>
+
+                     <!-- Machine Learning and Deep Learning -->
                      <div class="portfolio-item uxui">
                         <div class="image-box">
                            <img src="assets/img/portfolio/MBEs2.png" alt="" />
@@ -415,31 +418,8 @@
                         <div class="content-box">
                            <h3 class="portfolio-title">Machine Learning and Deep Learning</h3>
                            <p>This project explores advancements in machine learning and deep learning, focusing on the opportunities these technologies present for minority business enterprises (MBEs) while addressing challenges they face in accessing resources and capital.</p>
-
                            <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <div class="portfolio-item mobile-app">
-                        <div class="image-box">
-                           <img src="assets/img/portfolio/3.jpg" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Sebastian</h3>
-                           <p>Project was about precision and information.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <div class="portfolio-item branding">
-                        <div class="image-box">
-                           <img src="assets/img/portfolio/4.jpg" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Mochnix</h3>
-                           <p>Project was about precision and information.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                           <button data-mfp-src="#ml-dl-popup" class="portfolio-link modal-popup"></button>
                         </div>
                      </div>
                   </div>
@@ -450,7 +430,84 @@
       <!-- PORTFOLIO SECTION END -->
 
       <!-- start: Portfolio Popup -->
-      <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+      <div id="facial-recognition-popup" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+         <div class="popup_modal_img">
+            <img src="./assets/img/portfolio/facial-recognition.png" alt="" />
+         </div>
+         <div class="popup_modal_content">
+            <div class="portfolio_info">
+               <div class="portfolio_info_text">
+                  <h2 class="title">Facial Recognition Project</h2>
+                  <div class="desc">
+                     <p>
+                        This project involved implementing a high-accuracy facial recognition system using Python and OpenCV, focusing on real-time face detection and recognition. The system aims to streamline attendance processes by automatically logging presence based on face recognition.
+                     </p>
+                  </div>
+                  <a href="https://github.com/jason-xuu/Facial-Recognition-Project" class="btn tj-btn-primary" target="_blank">
+                     Explore Project <i class="flaticon-explore"></i>
+                  </a>
+               </div>
+               <div class="portfolio_info_items">
+                  <div class="info_item">
+                     <div class="key">Category</div>
+                     <div class="value">Research Project</div>
+                  </div>
+                  <div class="info_item">
+                     <div class="key">Start Date</div>
+                     <div class="value">September 15, 2023</div>
+                  </div>
+               </div>
+            </div>
+            <div class="portfolio_gallery owl-carousel">
+               <div class="gallery_item">
+                  <img src="./assets/img/portfolio-gallery/facial-recognition-1.png" alt="" />
+               </div>
+               <div class="gallery_item">
+                  <img src="./assets/img/portfolio-gallery/facial-recognition-2.png" alt="" />
+               </div>
+               <div class="gallery_item">
+                  <img src="./assets/img/portfolio-gallery/facial-recognition-3.png" alt="" />
+               </div>
+               <div class="gallery_item">
+                  <img src="./assets/img/portfolio-gallery/facial-recognition-4.png" alt="" />
+               </div>
+            </div>
+            <div class="portfolio_description">
+               <h2 class="title">Project Description</h2>
+               <div class="desc">
+                  <p>
+                     This project aims to enhance the accuracy and efficiency of attendance tracking through facial recognition technology. By utilizing advanced algorithms and machine learning techniques, the system is designed to identify individuals based on their facial features, ensuring reliable attendance logging while respecting privacy and ethical considerations.
+                  </p>
+                  <p>
+                     The implementation leverages Python and the OpenCV library for image processing, alongside machine learning models for training and prediction. This innovative approach not only improves operational efficiency but also demonstrates the potential of AI in streamlining administrative tasks.
+                  </p>
+               </div>
+            </div>
+            <div class="portfolio_story_approach">
+               <div class="portfolio_story">
+                  <div class="story_title">
+                     <h4 class="title">The Story</h4>
+                  </div>
+                  <div class="story_content">
+                     <p>
+                        As facial recognition technology continues to evolve, its applications expand across various sectors. This project explores the integration of such technology in educational institutions to automate attendance, thereby reducing administrative burdens and enhancing accuracy.
+                        
+                        The potential of AI-driven systems to facilitate seamless operations in educational settings is significant. By ensuring that students' presence is recorded accurately, the system promotes accountability and engagement while minimizing the time spent on manual attendance tracking.
+                        
+                        Addressing concerns regarding privacy and data protection is paramount, and this project emphasizes responsible AI practices, including transparent data usage and user consent.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="portfolio_navigation">
+               <div class="navigation_item prev-project">
+               </div>
+            </div>
+         </div>
+      </div>
+      
+
+      <div id="ml-dl-popup" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
          <div class="popup_modal_img">
             <img src="./assets/img/portfolio/MBEs.png" alt="" />
          </div>
@@ -538,22 +595,6 @@
             </div>
             <div class="portfolio_navigation">
                <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Project</div>
-                        <h3 class="title">Sebastian</h3>
-                     </div>
-                  </a>
-               </div>
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Project</div>
-                        <h3 class="title">Qwillo</h3>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
                </div>
             </div>
          </div>
