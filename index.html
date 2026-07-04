@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Jason Xu — Genome Browser Portfolio</title>
+  <meta name="description" content="Bioinformatician — microbial detection, host-response RNA-seq, and reproducible multi-omics pipelines. A résumé encoded as a genome and rendered like IGV/UCSC, running real bioinformatics in the browser." />
+  <meta name="author" content="Jason Xu" />
+  <meta name="theme-color" content="#0d0f14" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jason Xu — Genome Browser Portfolio" />
+  <meta property="og:description" content="A résumé encoded as a genome and rendered like IGV/UCSC. Pixel-art, animated, and running real bioinformatics in the browser." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://jason-xuu.github.io/portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jason Xu — Genome Browser Portfolio" />
+  <meta name="twitter:description" content="A résumé encoded as a genome, rendered like a genome browser. Real bioinformatics, live in the browser." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Theme tokens + app styles -->
+  <link rel="stylesheet" href="palette.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-view="browser">
+
+  <!-- Boot sequence (self-removes; skipped under reduced motion) -->
+  <div id="boot" class="boot" aria-hidden="true">
+    <pre class="boot__log" id="bootLog"></pre>
+  </div>
+
+  <!-- CRT scanline overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="topbar" role="banner">
+    <div class="topbar__brand">
+      <svg class="ico ico--brand" aria-hidden="true"><use href="sprites.svg#ic-dna" /></svg>
+      <div class="brand__text">
+        <span class="brand__name" id="brandName">JASON XU</span>
+        <span class="brand__sub" id="brandTagline">loading genome…</span>
+      </div>
+    </div>
+
+    <div class="topbar__search" role="search">
+      <span class="search__prompt" aria-hidden="true">/</span>
+      <input id="search" class="search__input" type="search" autocomplete="off" spellcheck="false"
+             placeholder="search genes — e.g. RNA-seq, Snakemake, Boston…" aria-label="Search the genome for a gene or skill" />
+      <ul id="searchResults" class="search__results" role="listbox" aria-label="Search results" hidden></ul>
+    </div>
+
+    <nav class="topbar__actions" aria-label="Site actions">
+      <button id="viewToggle" class="btn btn--ghost" type="button" aria-pressed="false"
+              title="Toggle list view (L)">List view</button>
+      <button id="motionToggle" class="btn btn--ghost" type="button" aria-pressed="true"
+              title="Toggle motion">Motion: on</button>
+      <a id="resumeLink" class="btn btn--amber" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </nav>
+  </header>
+
+  <!-- ======================= GENOME BROWSER VIEW ==================== -->
+  <main id="main" class="stage" role="main">
+
+    <!-- Chromosome tabs -->
+    <div class="chroms" id="chromTabs" role="tablist" aria-label="Chromosomes (résumé sections)"></div>
+
+    <section class="browser" id="browser" aria-label="Genome browser">
+      <!-- Ideogram / minimap -->
+      <div class="browser__ideo">
+        <canvas id="ideogram" class="pixelated" height="54" aria-label="Chromosome ideogram — click or drag to navigate"></canvas>
+      </div>
+
+      <!-- Coordinate ruler -->
+      <canvas id="ruler" class="browser__ruler pixelated" height="26" aria-hidden="true"></canvas>
+
+      <!-- Base sequence strip (visible when zoomed in) -->
+      <canvas id="seqstrip" class="browser__seq pixelated" height="20" aria-hidden="true"></canvas>
+
+      <!-- Feature track (interactive) -->
+      <div class="browser__trackwrap">
+        <canvas id="tracks" class="browser__tracks pixelated" tabindex="0"
+                role="application"
+                aria-label="Gene feature track. Use arrow keys to pan, plus and minus to zoom, j and k to move between genes, Enter to open a locus."></canvas>
+        <div id="hud" class="hud" aria-hidden="true"></div>
+        <div id="tooltip" class="tooltip" role="status" aria-live="polite" hidden></div>
+      </div>
+
+      <!-- Status / control bar -->
+      <div class="browser__bar">
+        <div class="locusreadout" id="locusReadout" aria-live="polite">chr — : — bp</div>
+        <div class="browser__ctrls">
+          <button class="btn btn--icon" id="prevGene" type="button" title="Previous gene (j)" aria-label="Previous gene">◄</button>
+          <button class="btn btn--icon" id="zoomOut" type="button" title="Zoom out (−)" aria-label="Zoom out">－</button>
+          <button class="btn btn--icon" id="zoomIn" type="button" title="Zoom in (+)" aria-label="Zoom in">＋</button>
+          <button class="btn btn--icon" id="resetView" type="button" title="Fit chromosome (0)" aria-label="Fit chromosome">⤢</button>
+          <button class="btn btn--icon" id="nextGene" type="button" title="Next gene (k)" aria-label="Next gene">►</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locus detail panel -->
+    <aside class="locus" id="locus" aria-live="polite" hidden>
+      <button class="locus__close" id="locusClose" type="button" aria-label="Close locus panel">✕</button>
+      <div class="locus__body" id="locusBody"></div>
+    </aside>
+
+    <p class="hint" id="hint">
+      Tip: click a gene to open its locus · drag or scroll the track to pan · <kbd>/</kbd> to search ·
+      <kbd>L</kbd> for a plain list · <kbd>?</kbd> for keys
+    </p>
+  </main>
+
+  <!-- ========================= LIST VIEW =========================== -->
+  <div id="listView" class="listview" hidden>
+    <div class="listview__inner" id="listInner"></div>
+  </div>
+
+  <!-- Keyboard help -->
+  <div id="keyhelp" class="keyhelp" hidden role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+    <div class="keyhelp__card">
+      <h2>Keyboard</h2>
+      <dl>
+        <dt>← →</dt><dd>pan the view</dd>
+        <dt>+ −</dt><dd>zoom in / out</dd>
+        <dt>0</dt><dd>fit chromosome</dd>
+        <dt>j / k</dt><dd>previous / next gene</dd>
+        <dt>[ ]</dt><dd>previous / next chromosome</dd>
+        <dt>Enter</dt><dd>open focused locus</dd>
+        <dt>/</dt><dd>focus search</dd>
+        <dt>L</dt><dd>toggle list view</dd>
+        <dt>Esc</dt><dd>close panel / help</dd>
+      </dl>
+      <button class="btn btn--ghost" id="keyhelpClose" type="button">close</button>
+    </div>
+  </div>
+
+  <footer class="foot" role="contentinfo">
+    <span id="footText">Jason Xu · Boston, MA</span>
+    <span class="foot__links" id="footLinks"></span>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/browser.js"></script>
+  <script src="js/cells.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
