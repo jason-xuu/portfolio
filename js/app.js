@@ -42,6 +42,7 @@
     wireControls();
     wireSearch(model);
     wireKeyboard();
+    if (window.Ambient) Ambient.setEnabled(state.motion);
 
     // boot animation, then reveal
     const lines = [
@@ -250,6 +251,7 @@
     mt.addEventListener("click", () => {
       state.motion = !state.motion;
       state.browser.setMotion(state.motion);
+      if (window.Ambient) Ambient.setEnabled(state.motion);
       mt.textContent = "Motion: " + (state.motion ? "on" : "off");
       mt.setAttribute("aria-pressed", String(state.motion));
     });

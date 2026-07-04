@@ -44,6 +44,9 @@ kbd {
 }
 .skip-link:focus { top: 8px; }
 
+/* ---------------------- ambient background -------------------------- */
+.ambient { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+
 /* ------------------------- pixel icons ------------------------------ */
 .ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12em; color: inherit; }
 .ico--brand { width: 26px; height: 26px; color: var(--accent); }
@@ -311,6 +314,13 @@ kbd {
   background: var(--panel); border: var(--px) solid var(--grid);
   border-left: 3px solid var(--sec-accent, var(--accent));
   border-radius: var(--radius); padding: 16px 18px; margin-bottom: 12px;
+  transition: transform var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
+              box-shadow var(--dur-fast) var(--ease);
+}
+.list-card:hover {
+  transform: translateX(3px);
+  border-left-color: var(--sec-accent, var(--accent));
+  box-shadow: -6px 0 0 -3px var(--sec-accent, var(--accent)), 0 8px 24px rgba(0,0,0,0.35);
 }
 .list-card h3 { margin: 0 0 2px; font-size: 15px; color: var(--ink); }
 .list-card .lc__sub { color: var(--muted); font-size: 13px; }
@@ -346,6 +356,14 @@ kbd {
   color: var(--dim); font-size: 12px; border-top: 1px solid var(--grid);
 }
 .foot__links { display: flex; gap: 16px; }
+.foot__links a, .locus__eyebrow + * a { position: relative; text-decoration: none; }
+.foot__links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+.foot__links a:hover { text-decoration: none; }
+.foot__links a:hover::after { transform: scaleX(1); }
 
 /* --------------------------- view switching ------------------------- */
 body[data-view="list"] .stage,
