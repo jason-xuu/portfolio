@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'DejaVu Sans','Arial',sans-serif">
+  <defs>
+    <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#000000" opacity="0.16"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- background + frame -->
+  <rect width="1200" height="630" fill="#0d0f14"/>
+  <rect x="16" y="16" width="1168" height="598" fill="none" stroke="#2b3750" stroke-width="4"/>
+
+  <!-- DNA motif (top-left), 16px grid scaled x4 -->
+  <g transform="translate(76,60) scale(4)" fill="#4ee36b" shape-rendering="crispEdges">
+    <rect x="6" y="2" width="4" height="1"/><rect x="6" y="7" width="4" height="1"/><rect x="6" y="12" width="4" height="1"/>
+    <rect x="5" y="2" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/>
+    <rect x="6" y="6" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="5" y="8" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/>
+    <rect x="7" y="10" width="1" height="1"/><rect x="7" y="11" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/>
+    <rect x="10" y="2" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/>
+    <rect x="9" y="6" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/>
+    <rect x="8" y="10" width="1" height="1"/><rect x="8" y="11" width="1" height="1"/><rect x="9" y="12" width="1" height="1"/><rect x="10" y="13" width="1" height="1"/>
+  </g>
+  <text x="168" y="112" font-size="24" letter-spacing="6" fill="#8092ab">GENOME&#160;BROWSER&#160;PORTFOLIO</text>
+
+  <!-- name -->
+  <text x="78" y="258" font-size="108" font-weight="700" letter-spacing="2" fill="#e9f6e5">JASON XU</text>
+  <rect x="82" y="284" width="430" height="8" fill="#4ee36b"/>
+
+  <!-- roles -->
+  <text x="82" y="346" font-size="33" font-weight="700" letter-spacing="1" fill="#ffb347">BIOINFORMATICIAN &#183; SCIENTIFIC SOFTWARE</text>
+  <text x="82" y="398" font-size="26" fill="#8092ab">microbial detection &#183; host-response RNA-seq &#183; reproducible multi-omics</text>
+
+  <!-- mini genome-browser strip -->
+  <text x="82" y="452" font-size="19" letter-spacing="3" fill="#4f5d75">chr1   chr2   chr3   chr4   chr5   chrM</text>
+  <rect x="80" y="470" width="1040" height="70" rx="6" fill="#141a24" stroke="#2b3750" stroke-width="2"/>
+  <g>
+    <rect x="110" y="490" width="120" height="30" rx="2" fill="#6ad0ff"/>
+    <rect x="250" y="490" width="80"  height="30" rx="2" fill="#4ee36b"/>
+    <rect x="350" y="490" width="150" height="30" rx="2" fill="#ffb347"/>
+    <rect x="520" y="490" width="70"  height="30" rx="2" fill="#c792ea"/>
+    <rect x="610" y="490" width="120" height="30" rx="2" fill="#ff6b8b"/>
+    <rect x="750" y="490" width="60"  height="30" rx="2" fill="#f4efe2"/>
+    <rect x="830" y="490" width="140" height="30" rx="2" fill="#4ee36b"/>
+    <rect x="990" y="490" width="110" height="30" rx="2" fill="#ffb347"/>
+  </g>
+  <!-- playhead -->
+  <rect x="688" y="470" width="6" height="70" fill="#4ee36b" opacity="0.6" filter="url(#glow)"/>
+  <rect x="690" y="470" width="2" height="70" fill="#4ee36b"/>
+
+  <!-- footer -->
+  <text x="1118" y="588" text-anchor="end" font-size="24" letter-spacing="1" fill="#4ee36b">github.com/jason-xuu</text>
+
+  <!-- scanline overlay -->
+  <rect width="1200" height="630" fill="url(#scan)"/>
+</svg>

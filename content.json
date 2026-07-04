@@ -1,0 +1,158 @@
+{
+  "_readme": "Single source of truth for page copy. Keys under 'genes' MUST match the ID= in genome.gff3. Runnable cells reference a .py file in demos/ via 'src'.",
+  "profile": {
+    "name": "Jason Xu",
+    "tagline": "Bioinformatician — microbial detection, host-response RNA-seq, and reproducible multi-omics pipelines.",
+    "blurb": "M.S. Bioinformatics candidate at Boston University (B.S. Computer Science, University of Washington). I build reproducible genomics pipelines and database-backed tools for infection, immunity, and host-response research.",
+    "location": "Boston, MA",
+    "email": "jxu5041@bu.edu",
+    "github": "https://github.com/jason-xuu",
+    "linkedin": "https://www.linkedin.com/in/jsonxuu",
+    "resume": "assets/resume.pdf"
+  },
+  "chromosomes": {
+    "chr1": { "label": "Education",       "accent": "--c-edu",      "icon": "gradcap" },
+    "chr2": { "label": "Experience",      "accent": "--c-research", "icon": "flask" },
+    "chr3": { "label": "Projects",        "accent": "--c-projects", "icon": "folder" },
+    "chr4": { "label": "Skills",          "accent": "--c-skills",   "icon": "dna" },
+    "chr5": { "label": "Awards & Writing","accent": "--c-pubs",     "icon": "book" },
+    "chrM": { "label": "About",           "accent": "--c-contact",  "icon": "mail" }
+  },
+  "genes": {
+    "edu_ms": {
+      "title": "M.S. Bioinformatics",
+      "subtitle": "Boston University · Boston, MA",
+      "dates": "Expected Dec. 2026",
+      "summary": "Graduate study in genomics data science, statistical modeling, biological databases, and machine learning for biomedical data.",
+      "tags": ["Genomics Data Science", "Statistical Modeling", "Biological Databases", "ML for Biomedical Data"],
+      "links": []
+    },
+    "edu_bs": {
+      "title": "B.S. Computer Science",
+      "subtitle": "University of Washington · Seattle, WA",
+      "dates": "2020 – 2025",
+      "summary": "Computer science foundations in algorithms, data structures, systems, and software engineering. Dean's List.",
+      "tags": ["Algorithms", "Data Structures", "Systems", "Dean's List"],
+      "links": []
+    },
+    "exp_iris": {
+      "title": "Bioinformatics Analyst Intern (Full-Time)",
+      "subtitle": "IRIS Kinetics · Boston, MA",
+      "dates": "2026 – Present",
+      "summary": "Build and maintain Python/R workflows for high-throughput, label-free multiplexed microarray biosensing data — metadata validation, batch-level QC, normalization-ready outputs, and scientist-facing summaries across antibody-antigen, viral-particle, and nucleic-acid/SNP assays. Support microbial detection and diagnostic-assay development with CLIA-style validation readiness and traceability.",
+      "tags": ["Python", "R", "Assay QC", "Serology", "CLIA"],
+      "links": []
+    },
+    "exp_bu": {
+      "title": "Bioinformatics Pipeline Developer",
+      "subtitle": "Boston University · Boston, MA",
+      "dates": "2025 – Present",
+      "summary": "Design RNA-seq workflows (FastQC, STAR, featureCounts, DESeq2, edgeR, limma, Bioconductor) for QC, alignment, quantification, differential expression, and host-response gene-signature review. Implement motif/promoter analysis with MEME Suite and build reproducible, containerized notebooks (Conda, Docker, Git, Snakemake/Nextflow, SLURM).",
+      "tags": ["RNA-seq", "DESeq2", "Snakemake", "MEME Suite", "HPC"],
+      "links": []
+    },
+    "exp_sepal": {
+      "title": "AI Model Evaluation Analyst",
+      "subtitle": "Sepal AI · Remote",
+      "dates": "2025 – Present",
+      "summary": "Evaluated 400+ model outputs across scientific reasoning, structured-data transformation, and analytical workflows. Designed benchmark prompts and failure-mode reports for transformer systems — QA discipline directly applicable to pipeline validation and diagnostic bioinformatics.",
+      "tags": ["Model Evaluation", "QA", "Transformers", "Reproducibility"],
+      "links": []
+    },
+    "exp_mbda": {
+      "title": "AI/ML Research Analyst Intern",
+      "subtitle": "MBDA Federal Procurement Center · Washington, DC",
+      "dates": "Jun – Aug 2023",
+      "summary": "Built Python/pandas machine-learning analyses for large structured datasets (feature engineering, model comparison, statistical visualization, stakeholder reporting). Authored a 10-page technical report on generative AI and transfer-learning applications.",
+      "tags": ["Python", "pandas", "Machine Learning"],
+      "links": []
+    },
+    "proj_multiomics": {
+      "title": "Microbial Detection & Host-Response Multi-Omics Workflow",
+      "subtitle": "Python · R · Bioconductor · Snakemake · Docker",
+      "dates": "2025",
+      "summary": "A Columbia CII-aligned workflow integrating RNA-seq, high-throughput serology / protein-array outputs, microbiome feature tables, and clinical metadata into analysis-ready matrices. Maps to microbial discovery and host-response questions: QC reports, differential-expression tables, pathway enrichment, biomarker ranking, and reproducible reruns on shared HPC. The demo runs a minimal nucleic-acid/SNP detection step in your browser.",
+      "tags": ["Multi-omics", "Snakemake", "Microbiome", "RNA-seq"],
+      "links": [{ "label": "GitHub", "url": "#" }],
+      "runnable": { "language": "python", "label": "Run: detect SNPs", "src": "demos/variants.py" }
+    },
+    "proj_dashboard": {
+      "title": "Clinical Genomics Dashboard for RNA-seq",
+      "subtitle": "Python · FastAPI · React · PostgreSQL · Docker",
+      "dates": "2025",
+      "summary": "REST APIs and a database-backed dashboard for querying differential-expression results, gene annotations, volcano plots, and pathway-enrichment outputs from FastQC/STAR/featureCounts/DESeq2 workflows. The demo runs the core transcription/translation step live.",
+      "tags": ["FastAPI", "React", "PostgreSQL", "RNA-seq"],
+      "links": [{ "label": "GitHub", "url": "#" }],
+      "runnable": { "language": "python", "label": "Run: transcribe & translate", "src": "demos/translate.py" }
+    },
+    "proj_rag": {
+      "title": "Biomedical Literature RAG Assistant",
+      "subtitle": "Python · LangChain · OpenAI API · FAISS",
+      "dates": "2024",
+      "summary": "A retrieval-augmented system for gene-function and disease-association interpretation, combining vector search over biomedical literature with structured summaries for researcher review.",
+      "tags": ["RAG", "LangChain", "FAISS", "NLP"],
+      "links": [{ "label": "GitHub", "url": "#" }]
+    },
+    "proj_portfolio": {
+      "title": "This Genome Browser",
+      "subtitle": "Canvas · Pyodide (WASM) · GFF3 · GitHub Pages",
+      "dates": "2026",
+      "summary": "My résumé encoded as a genome and rendered like IGV/UCSC — data-driven from a GFF3 file, pixel-art styled, animated, and running real bioinformatics in the browser. The demo renders a GC-content plot client-side, no server involved.",
+      "tags": ["Canvas", "Pyodide / WASM", "GFF3", "GitHub Pages"],
+      "links": [{ "label": "Source", "url": "https://github.com/jason-xuu/portfolio" }],
+      "runnable": { "language": "python", "label": "Run: plot GC content", "src": "demos/gc_plot.py" }
+    },
+    "skl_python":       { "title": "Python",              "subtitle": "primary language",   "summary": "pandas, NumPy, scientific scripting, pipeline glue." },
+    "skl_r":            { "title": "R",                   "subtitle": "stats & genomics",    "summary": "Bioconductor, ggplot2, statistical analysis." },
+    "skl_bioconductor": { "title": "Bioconductor",       "subtitle": "expression analysis", "summary": "DESeq2, edgeR, limma for differential expression." },
+    "skl_rnaseq":       { "title": "RNA-seq / DE",        "subtitle": "host response",       "summary": "QC → alignment → quantification → differential expression → pathways." },
+    "skl_align":        { "title": "Alignment & Variants","subtitle": "sequence analysis",  "summary": "STAR, BWA, BLAST, GATK, variant/nucleic-acid detection." },
+    "skl_workflow":     { "title": "Workflows",          "subtitle": "reproducibility",     "summary": "Snakemake, Nextflow, Docker, Conda." },
+    "skl_hpc":          { "title": "HPC & Tooling",      "subtitle": "scale",               "summary": "Linux, Git, HPC / SLURM, workflow documentation." },
+    "skl_stats":        { "title": "Stats & QC",         "subtitle": "rigor",               "summary": "Statistical modeling, QC metrics, FastQC, featureCounts." },
+    "skl_ml":           { "title": "Machine Learning",   "subtitle": "modeling",            "summary": "scikit-learn, PyTorch, transformers, RAG, model evaluation." },
+    "skl_db":           { "title": "Databases",          "subtitle": "data systems",        "summary": "SQL, PostgreSQL, MySQL, database-ready outputs." },
+    "report_mbda": {
+      "title": "ML & Deep Learning for Minority Business Enterprises",
+      "subtitle": "U.S. Dept. of Commerce, MBDA · 2023",
+      "dates": "2023",
+      "summary": "Authored a publication-style internal technical report on machine-learning and deep-learning advancements and opportunities for minority business enterprises.",
+      "tags": ["Technical Report", "ML / DL"],
+      "links": []
+    },
+    "award_scholarship": {
+      "title": "Graduate Tuition Merit Scholarship",
+      "subtitle": "Boston University",
+      "dates": "2025 – Present",
+      "summary": "Merit scholarship awarded for graduate study in the M.S. Bioinformatics program.",
+      "tags": ["Merit"],
+      "links": []
+    },
+    "award_deans": {
+      "title": "Dean's List",
+      "subtitle": "University of Washington",
+      "dates": "2020 – 2025",
+      "summary": "Recognized on the Dean's List during undergraduate study in Computer Science.",
+      "tags": ["Honors"],
+      "links": []
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "the human behind the genome",
+      "summary": "Bioinformatician and scientific software developer. M.S. Bioinformatics candidate at Boston University, B.S. Computer Science from the University of Washington (Dean's List). I work across microbial detection, host-response RNA-seq, high-throughput serology, and reproducible multi-omics pipelines — currently focused on infection & immunity bioinformatics.",
+      "tags": [],
+      "links": []
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "let's talk",
+      "summary": "Boston, MA · (425) 757-2656. Best way to reach me is email — open to bioinformatics and computational-biology roles.",
+      "tags": [],
+      "links": [
+        { "label": "Email", "url": "mailto:jxu5041@bu.edu" },
+        { "label": "GitHub", "url": "https://github.com/jason-xuu" },
+        { "label": "LinkedIn", "url": "https://www.linkedin.com/in/jsonxuu" }
+      ]
+    }
+  }
+}

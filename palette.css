@@ -1,0 +1,78 @@
+/* =====================================================================
+   Portfolio theme — retro 8-bit LOOK, modern SMOOTH motion.
+   Import first, then build on these tokens.
+   Aesthetic: dark phosphor terminal meets SNES. Limited, cohesive palette.
+   ===================================================================== */
+:root {
+  /* --- base surfaces --- */
+  --bg:        #0d0f14;   /* near-black blue — page */
+  --bg-alt:    #141a24;   /* panel backdrop */
+  --panel:     #1b2330;   /* cards / tracks */
+  --panel-2:   #232d3d;   /* raised elements */
+  --grid:      #2b3750;   /* gridlines / ruler ticks */
+
+  /* --- ink --- */
+  --ink:       #e9f6e5;   /* primary text (soft phosphor white) */
+  --muted:     #8092ab;   /* secondary text */
+  --dim:       #4f5d75;   /* tertiary / disabled */
+
+  /* --- signal accents --- */
+  --accent:      #4ee36b; /* phosphor green — primary CTA / playhead */
+  --accent-amber:#ffb347; /* amber — highlights / run button */
+  --danger:      #ff6b8b; /* variants / warnings */
+
+  /* --- per-chromosome accents (referenced by content.json) --- */
+  --c-edu:      #6ad0ff;  /* chr1 Education  — cyan */
+  --c-research: #4ee36b;  /* chr2 Research   — green */
+  --c-projects: #ffb347;  /* chr3 Projects   — amber */
+  --c-skills:   #c792ea;  /* chr4 Skills     — purple */
+  --c-pubs:     #ff6b8b;  /* chr5 Publications — pink */
+  --c-contact:  #f4efe2;  /* chrM About      — bone */
+
+  /* --- ideogram Giemsa stains (map gieStain -> color) --- */
+  --gie-gneg:   #e9f6e5;
+  --gie-gpos25: #9fb0c6;
+  --gie-gpos50: #6b7d99;
+  --gie-gpos75: #47566e;
+  --gie-gpos100:#2b3750;
+  --gie-acen:   #ff6b8b;  /* centromere */
+
+  /* --- type --- */
+  --font-pixel: 'Press Start 2P', 'VT323', monospace; /* headings / accents */
+  --font-body:  'DM Mono', 'IBM Plex Mono', ui-monospace, monospace; /* body */
+
+  /* --- motion (keep animations smooth: ease + duration tokens) --- */
+  --ease:       cubic-bezier(0.22, 1, 0.36, 1);   /* easeOutQuint — silky */
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   140ms;
+  --dur:        280ms;
+  --dur-slow:   520ms;
+
+  /* --- structure --- */
+  --radius: 4px;          /* keep small — pixel corners */
+  --px: 2px;              /* base pixel unit for chunky borders/shadows */
+}
+
+/* Crisp pixel edges for sprites/canvas; smoothness comes from motion, not blur. */
+.pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+/* Subtle scanline + vignette overlay — apply to a fixed, pointer-events:none layer. */
+.crt-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.14) 0 1px, transparent 1px 3px),
+    radial-gradient(120% 120% at 50% 50%, transparent 60%, rgba(0,0,0,0.35));
+  mix-blend-mode: multiply;
+}
+
+/* Chunky pixel border helper. */
+.pixel-border {
+  border: var(--px) solid var(--grid);
+  box-shadow: 0 0 0 var(--px) var(--bg), 0 var(--px) 0 var(--px) rgba(0,0,0,0.5);
+}
+
+/* Respect reduced motion — the build should also gate JS tweening on this. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur: 0ms; --dur-slow: 0ms; }
+  .crt-overlay { display: none; }
+}

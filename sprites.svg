@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" shape-rendering="crispEdges" font-family="monospace">
+  <!-- ================================================================
+       Pixel-art sprite sheet. Use in the site like:
+         <svg class="ico"><use href="sprites.svg#ic-flask"/></svg>
+       Icons inherit color via CSS `color` (fill=currentColor).
+       Each symbol is a 16x16 pixel grid.
+       ================================================================ -->
+  <defs>
+    <symbol id="ic-gradcap" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="7" y="2" width="2" height="1"/><rect x="5" y="3" width="6" height="1"/>
+        <rect x="3" y="4" width="10" height="1"/><rect x="2" y="5" width="12" height="1"/>
+        <rect x="4" y="6" width="8" height="1"/><rect x="6" y="7" width="4" height="1"/>
+        <rect x="6" y="8" width="4" height="1"/><rect x="6" y="9" width="4" height="1"/>
+        <rect x="12" y="6" width="1" height="4"/><rect x="11" y="10" width="2" height="2"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-flask" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="6" y="2" width="4" height="1"/><rect x="7" y="3" width="2" height="4"/>
+        <rect x="6" y="7" width="4" height="1"/><rect x="5" y="8" width="6" height="2"/>
+        <rect x="4" y="10" width="8" height="2"/><rect x="3" y="12" width="10" height="2"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-folder" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="2" y="3" width="6" height="2"/><rect x="2" y="5" width="12" height="8"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-dna" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <!-- rungs -->
+        <rect x="6" y="2" width="4" height="1"/><rect x="6" y="7" width="4" height="1"/><rect x="6" y="12" width="4" height="1"/>
+        <!-- left strand -->
+        <rect x="5" y="2" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/>
+        <rect x="6" y="6" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="5" y="8" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/>
+        <rect x="7" y="10" width="1" height="1"/><rect x="7" y="11" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/>
+        <!-- right strand -->
+        <rect x="10" y="2" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/>
+        <rect x="9" y="6" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/>
+        <rect x="8" y="10" width="1" height="1"/><rect x="8" y="11" width="1" height="1"/><rect x="9" y="12" width="1" height="1"/><rect x="10" y="13" width="1" height="1"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-book" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="2" y="4" width="4" height="9"/><rect x="7" y="4" width="2" height="9"/><rect x="10" y="4" width="4" height="9"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-mail" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="2" y="4" width="12" height="1"/><rect x="2" y="11" width="12" height="1"/>
+        <rect x="2" y="4" width="1" height="8"/><rect x="13" y="4" width="1" height="8"/>
+        <rect x="3" y="5" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="6" y="8" width="1" height="1"/><rect x="7" y="9" width="1" height="1"/>
+        <rect x="12" y="5" width="1" height="1"/><rect x="11" y="6" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-play" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="5" y="3" width="1" height="10"/><rect x="6" y="4" width="1" height="8"/><rect x="7" y="5" width="1" height="6"/><rect x="8" y="6" width="1" height="4"/><rect x="9" y="7" width="1" height="2"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-gene" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="3" y="6" width="7" height="4"/><rect x="10" y="5" width="1" height="6"/><rect x="11" y="6" width="1" height="4"/><rect x="12" y="7" width="1" height="2"/>
+      </g>
+    </symbol>
+
+    <symbol id="ic-playhead" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <rect x="5" y="2" width="6" height="1"/><rect x="6" y="3" width="4" height="1"/><rect x="7" y="4" width="2" height="1"/><rect x="7" y="5" width="2" height="9"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <!-- ===== visible legend (preview only; not needed by the site) ===== -->
+  <rect x="0" y="0" width="760" height="300" fill="#0d0f14"/>
+  <text x="24" y="34" fill="#4ee36b" font-size="15">PIXEL SPRITE SHEET — use href="sprites.svg#ic-name"</text>
+
+  <g transform="translate(24,64)">
+    <!-- row 1 -->
+    <g style="color:#6ad0ff"><use href="#ic-gradcap" width="48" height="48"/></g>
+    <text y="66" fill="#8092ab" font-size="12">ic-gradcap</text>
+    <g transform="translate(140,0)" style="color:#4ee36b"><use href="#ic-flask" width="48" height="48"/></g>
+    <text x="140" y="66" fill="#8092ab" font-size="12">ic-flask</text>
+    <g transform="translate(280,0)" style="color:#ffb347"><use href="#ic-folder" width="48" height="48"/></g>
+    <text x="280" y="66" fill="#8092ab" font-size="12">ic-folder</text>
+    <g transform="translate(420,0)" style="color:#c792ea"><use href="#ic-dna" width="48" height="48"/></g>
+    <text x="420" y="66" fill="#8092ab" font-size="12">ic-dna</text>
+    <g transform="translate(560,0)" style="color:#ff6b8b"><use href="#ic-book" width="48" height="48"/></g>
+    <text x="560" y="66" fill="#8092ab" font-size="12">ic-book</text>
+  </g>
+
+  <g transform="translate(24,184)">
+    <!-- row 2 -->
+    <g style="color:#f4efe2"><use href="#ic-mail" width="48" height="48"/></g>
+    <text y="66" fill="#8092ab" font-size="12">ic-mail</text>
+    <g transform="translate(140,0)" style="color:#ffb347"><use href="#ic-play" width="48" height="48"/></g>
+    <text x="140" y="66" fill="#8092ab" font-size="12">ic-play</text>
+    <g transform="translate(280,0)" style="color:#4ee36b"><use href="#ic-gene" width="48" height="48"/></g>
+    <text x="280" y="66" fill="#8092ab" font-size="12">ic-gene</text>
+    <g transform="translate(420,0)" style="color:#4ee36b"><use href="#ic-playhead" width="48" height="48"/></g>
+    <text x="420" y="66" fill="#8092ab" font-size="12">ic-playhead</text>
+  </g>
+</svg>

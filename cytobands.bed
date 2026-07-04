@@ -1,0 +1,32 @@
+# cytoBandIdeo-format bands for the ideogram (chrom  start  end  name  gieStain)
+# gieStain: gneg gpos25 gpos50 gpos75 gpos100 acen (centromere) — mimics a
+# Giemsa-stained chromosome so the ideogram reads as a real genome browser.
+chr1	0	1200	p13	gneg
+chr1	1200	2400	p12	gpos50
+chr1	2400	2900	p11	acen
+chr1	2900	3400	q11	acen
+chr1	3400	4700	q12	gpos75
+chr1	4700	6000	q13	gneg
+chr2	0	1500	p13	gneg
+chr2	1500	3000	p12	gpos75
+chr2	3000	3600	p11	acen
+chr2	3600	4200	q11	acen
+chr2	4200	6000	q12	gpos50
+chr2	6000	8000	q13	gneg
+chr3	0	1800	p13	gpos25
+chr3	1800	3600	p12	gneg
+chr3	3600	4200	p11	acen
+chr3	4200	4800	q11	acen
+chr3	4800	6800	q12	gpos100
+chr3	6800	9000	q13	gneg
+chr4	0	1400	p12	gneg
+chr4	1400	2600	p11	acen
+chr4	2600	3200	q11	acen
+chr4	3200	6000	q12	gpos50
+chr5	0	1600	p12	gpos50
+chr5	1600	2400	p11	acen
+chr5	2400	3000	q11	acen
+chr5	3000	6000	q12	gneg
+chrM	0	1400	p11	gpos25
+chrM	1400	1600	cen	acen
+chrM	1600	3000	q11	gneg

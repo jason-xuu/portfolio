@@ -1,0 +1,56 @@
+##gff-version 3
+# =====================================================================
+# Portfolio genome — Jason Xu (bio-forward)
+# Each chromosome = a career / life phase.
+# Each "gene" = one portfolio item (degree, role, project, award...).
+# The website renders itself from THIS file + content.json.
+# To add an item: add a gene line here, then add a matching entry
+# (same ID) in content.json. Coordinates are arbitrary "bp" — just
+# keep genes inside their chromosome's ##sequence-region length and
+# non-overlapping for a clean layout.
+#   chr1 Education | chr2 Experience | chr3 Projects
+#   chr4 Skills    | chr5 Awards & Writing | chrM About/Contact
+# =====================================================================
+##sequence-region chr1 1 6000
+##sequence-region chr2 1 8000
+##sequence-region chr3 1 9000
+##sequence-region chr4 1 6000
+##sequence-region chr5 1 6000
+##sequence-region chrM 1 3000
+
+# ---- chr1 : EDUCATION ------------------------------------------------
+chr1	portfolio	gene	500	2000	.	+	.	ID=edu_ms;Name=M.S. Bioinformatics — Boston University;category=education
+chr1	portfolio	gene	2600	4200	.	+	.	ID=edu_bs;Name=B.S. Computer Science — University of Washington;category=education
+
+# ---- chr2 : EXPERIENCE -----------------------------------------------
+chr2	portfolio	gene	400	2000	.	+	.	ID=exp_iris;Name=Bioinformatics Analyst Intern — IRIS Kinetics;category=experience
+chr2	portfolio	gene	2400	4000	.	+	.	ID=exp_bu;Name=Bioinformatics Pipeline Developer — Boston University;category=experience
+chr2	portfolio	gene	4400	6000	.	+	.	ID=exp_sepal;Name=AI Model Evaluation Analyst — Sepal AI;category=experience
+chr2	portfolio	gene	6400	7600	.	-	.	ID=exp_mbda;Name=AI/ML Research Analyst Intern — MBDA;category=experience
+
+# ---- chr3 : PROJECTS (runnable=true opens a live Pyodide cell) -------
+chr3	portfolio	gene	400	2200	.	+	.	ID=proj_multiomics;Name=Microbial Detection & Host-Response Multi-Omics Workflow;category=projects;runnable=true
+chr3	portfolio	gene	2700	4400	.	+	.	ID=proj_dashboard;Name=Clinical Genomics Dashboard for RNA-seq;category=projects;runnable=true
+chr3	portfolio	gene	4900	6400	.	+	.	ID=proj_rag;Name=Biomedical Literature RAG Assistant;category=projects
+chr3	portfolio	gene	6900	8600	.	+	.	ID=proj_portfolio;Name=This Genome Browser;category=projects;runnable=true
+
+# ---- chr4 : SKILLS (short features = a skills track) -----------------
+chr4	portfolio	gene	300	700	.	+	.	ID=skl_python;Name=Python;category=skills
+chr4	portfolio	gene	800	1200	.	+	.	ID=skl_r;Name=R;category=skills
+chr4	portfolio	gene	1300	1700	.	+	.	ID=skl_bioconductor;Name=Bioconductor;category=skills
+chr4	portfolio	gene	1800	2200	.	+	.	ID=skl_rnaseq;Name=RNA-seq / DE;category=skills
+chr4	portfolio	gene	2300	2700	.	+	.	ID=skl_align;Name=Alignment & Variants;category=skills
+chr4	portfolio	gene	2800	3200	.	+	.	ID=skl_workflow;Name=Workflows;category=skills
+chr4	portfolio	gene	3300	3700	.	+	.	ID=skl_hpc;Name=HPC & Tooling;category=skills
+chr4	portfolio	gene	3800	4200	.	+	.	ID=skl_stats;Name=Stats & QC;category=skills
+chr4	portfolio	gene	4300	4700	.	+	.	ID=skl_ml;Name=Machine Learning;category=skills
+chr4	portfolio	gene	4800	5200	.	+	.	ID=skl_db;Name=Databases;category=skills
+
+# ---- chr5 : AWARDS & WRITING ----------------------------------------
+chr5	portfolio	gene	600	2400	.	+	.	ID=report_mbda;Name=MBDA Technical Report on ML/DL;category=awards
+chr5	portfolio	gene	3000	4200	.	+	.	ID=award_scholarship;Name=Graduate Tuition Merit Scholarship;category=awards
+chr5	portfolio	gene	4600	5600	.	+	.	ID=award_deans;Name=Dean's List;category=awards
+
+# ---- chrM : ABOUT / CONTACT -----------------------------------------
+chrM	portfolio	gene	300	1200	.	+	.	ID=about;Name=About;category=contact
+chrM	portfolio	gene	1600	2600	.	+	.	ID=contact;Name=Contact;category=contact
