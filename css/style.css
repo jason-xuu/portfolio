@@ -381,6 +381,13 @@ body[data-view="browser"] .listview { display: none; }
   .topbar__actions .btn { padding: 7px 9px; }
 }
 @media (max-width: 480px) {
+  .topbar {
+    grid-template-columns: 1fr;
+    grid-template-areas: "brand" "actions" "search";
+    gap: 10px;
+  }
+  .topbar__actions { justify-content: flex-start; flex-wrap: wrap; }
+  .topbar__actions .btn { font-size: 9px; padding: 7px 8px; }
   .locus { padding: 16px; }
   .locus__title { font-size: 13px; }
 }

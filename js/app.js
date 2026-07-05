@@ -237,10 +237,12 @@
   /* -------------------------- view + motion ------------------------ */
   function setView(view) {
     document.body.dataset.view = view;
+    $("#listView").hidden = view !== "list";   // beat the `.listview[hidden]` guard
     const t = $("#viewToggle");
     t.setAttribute("aria-pressed", view === "list" ? "true" : "false");
     t.textContent = view === "list" ? "Browser view" : "List view";
     if (view === "browser" && state.browser) { state.browser.resize(); state.browser.renderAll(); }
+    if (view === "list") window.scrollTo(0, 0);
   }
 
   function wireControls() {
